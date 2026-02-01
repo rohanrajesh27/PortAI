@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- Feedback section in popup: "Is Port AI useful? Yes / Not yet" (links to Discussions / Issues)
+- Report issue link
+### Fixed
+- Ollama URL restricted to localhost/127.0.0.1 only (prevents data exfil to arbitrary URLs)
+
 ## [0.2.0] - 2025-02-01
 
 ### Added
