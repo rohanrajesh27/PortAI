@@ -358,35 +358,22 @@ section:last-child {
 
 /* Footer */
 .footer {
-  margin-top: 16px;
-  padding-top: 12px;
+  margin-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid var(--border);
 }
 
-.feedback-q {
-  font-size: 11px;
+.footer-line {
+  font-size: 10px;
   color: var(--text-muted);
-  margin: 0 0 6px;
+  line-height: 1;
 }
 
-.feedback-btns {
-  margin-bottom: 8px;
-}
-
-.feedback-link,
-.footer-link {
+.footer-line a {
   color: var(--accent);
   text-decoration: none;
-  font-size: 12px;
 }
 
-.feedback-link:hover,
-.footer-link:hover {
+.footer-line a:hover {
   text-decoration: underline;
-}
-
-.footer .sep {
-  margin: 0 6px;
-  color: var(--text-muted);
-  font-size: 12px;
 }

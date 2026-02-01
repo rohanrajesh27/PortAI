@@ -1,67 +1,109 @@
 # Port AI
 
-**Continue work on another AI in one click.**
-
-Copy-paste bloats. Port AI compresses your conversation and carries it forward—switch from ChatGPT to Claude to Grok without re-explaining or starting over.
+Continue work on another AI in one click.
 
 ---
 
-## What it does
+## What it is
 
-- **One click** – Pull your chat and inject it into another AI
-- **Compressed** – Keeps decisions and open questions, trims the rest
-- **Native** – Works inside the chat apps you already use
+Port AI is a Chrome extension that lets you move a conversation from one AI chatbot to another—ChatGPT, Claude, or Grok—without re-explaining yourself. Copy-paste sends everything and bloats the new chat. Port AI compresses what matters (decisions, open questions, constraints) and injects it so the next AI picks up where you left off.
 
-**Supported:** ChatGPT, Claude, Grok
+---
+
+## How it works
+
+1. You’re in a chat on ChatGPT (or Claude, or Grok).
+2. You click the Port AI icon or the floating **Port** button.
+3. You choose where to port (e.g. “Port to Claude”).
+4. A new tab opens on the other AI with your conversation compressed and ready. You keep going.
+
+The extension pulls your chat from the page, compresses it (keeps decisions, questions, constraints, recent turns), and injects that into a new chat. No backend. Everything stays on your device.
+
+---
+
+## Purpose
+
+Switch between AIs when you need different strengths—e.g. start in ChatGPT, move to Claude for coding, or Grok for real-time info—without losing context or restarting the conversation.
 
 ---
 
 ## Installation
 
-1. [Download the latest release](https://github.com/rohanrajesh27/PortAI/releases)
-2. [Follow the install guide](INSTALL.md)
+**You need:** Google Chrome (Windows or Mac)
+
+### Step 1: Download
+
+1. Go to [Releases](https://github.com/rohanrajesh27/PortAI/releases)
+2. Click the latest version (e.g. **v0.2.0**)
+3. Download the `.zip` file
+
+The file usually ends up in your **Downloads** folder.
+
+### Step 2: Extract the zip
+
+**Windows:**
+
+- Right‑click the zip file → **Extract All**
+- Choose a folder (or use the default) → **Extract**
+- Remember where the extracted folder is
+
+**Mac:**
+
+- Double‑click the zip file
+- A new folder appears (e.g. `PortAI-v0.2.0`)
+
+### Step 3: Open Chrome Extensions
+
+1. Open **Google Chrome**
+2. In the address bar, type: `chrome://extensions`
+3. Press Enter
+
+### Step 4: Turn on Developer mode
+
+1. Find **Developer mode** in the top‑right of the Extensions page
+2. Turn the switch **ON** (it turns blue)
+
+### Step 5: Load the extension
+
+1. Click **Load unpacked**
+2. In the window that opens, go to the folder you extracted (Step 2)
+3. Select that folder (it should contain a file called `manifest.json`)
+4. Click **Select Folder** (Windows) or **Select** (Mac)
+
+### Step 6: Confirm
+
+The Port AI icon should appear in your Chrome toolbar. If you don’t see it, click the **puzzle piece** icon and click **Pin** next to Port AI.
 
 ---
 
-## How to use
+## Troubleshooting
 
-1. Open a chat on ChatGPT, Claude, or Grok
-2. Click the Port AI icon or the floating **Port** button
-3. Choose where to port (e.g. "Port to Claude")
-4. A new tab opens with your conversation ready to continue
+| Issue | What to do |
+|-------|------------|
+| “Load unpacked” is missing | Turn **Developer mode** ON (Step 4) |
+| “Manifest file is missing or unreadable” | Select the folder that contains `manifest.json`, not a file inside it |
+| Icon doesn’t appear | Click the puzzle piece in the toolbar → Pin Port AI |
 
 ---
 
 ## Optional
 
-**Persona & Project** – Add in the popup. Injected with every port for context.
-
-**Ollama** – Run [Ollama](https://ollama.com) locally for richer summaries. Add its URL in settings.
+- **Persona & project:** Add who you are and what you’re working on in the popup. This gets injected with every port.
+- **Ollama:** If you run [Ollama](https://ollama.com) locally, you can add its URL for richer summaries.
 
 ---
 
 ## Privacy
 
-Data stays on your device. No servers. [Full policy](PRIVACY_POLICY.html)
+Data stays on your device. No servers. No analytics. [Privacy policy](PRIVACY_POLICY.html)
 
 ---
 
 ## Updates
 
-1. Remove old Port AI from `chrome://extensions`
-2. [Download new zip](https://github.com/rohanrajesh27/PortAI/releases)
-3. Repeat [installation](INSTALL.md)
+When a new version is released:
 
----
-
-## FAQ
-
-**Safari / Firefox?** Chrome only for now.
-
-**Why not copy-paste?** Copy-paste bloats. Port AI compresses so the next AI gets what it needs.
-
-**Broke after a site update?** Check [Releases](https://github.com/rohanrajesh27/PortAI/releases) for an update.
-
----
-
-*Experimental. DOM-based extraction may break when sites change. For power users, builders, researchers.*
+1. Open `chrome://extensions`
+2. Remove the old Port AI extension
+3. Download the new zip from [Releases](https://github.com/rohanrajesh27/PortAI/releases)
+4. Repeat the installation steps above

@@ -3,8 +3,10 @@
 ## [Unreleased]
 
 ### Added
-- Feedback section in popup: "Is Port AI useful? Yes / Not yet" (links to Discussions / Issues)
-- Report issue link
+- Rule-based extraction: D: (decisions), Q: (questions), C: (constraints), S: (status)
+- Expanded regex patterns for filler stripping and meta-phrases
+- Feedback section in popup: "Is Port AI useful? Yes / Not yet" + Report issue link
+
 ### Fixed
 - Ollama URL restricted to localhost/127.0.0.1 only (prevents data exfil to arbitrary URLs)
 
