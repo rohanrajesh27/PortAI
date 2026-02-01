@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Port AI",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Continue work on another AI in one click. Preserves decisions, compresses context. ChatGPT, Claude, Grok.",
   "permissions": ["storage", "activeTab", "scripting", "tabs"],
   "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],

@@ -1,23 +1,17 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.0] - 2025-01-28
 
-### Added
-- Rule-based extraction: D: (decisions), Q: (questions), C: (constraints), S: (status)
-- Expanded regex patterns for filler stripping and meta-phrases
-- Feedback section in popup: "Is Port AI useful? Yes / Not yet" + Report issue link
+First public release.
 
-### Fixed
-- Ollama URL restricted to localhost/127.0.0.1 only (prevents data exfil to arbitrary URLs)
-
-## [0.2.0] - 2025-02-01
-
-### Added
-- Inline floating Port button (ChatGPT, Claude, Grok)
-- Fallback mode when scraping fails (persona + project only)
-- Optional Ollama summarization
+### Features
+- One-click port from ChatGPT, Claude, or Grok to another
+- Rule-based compression (decisions, questions, constraints, status)
+- Inline floating Port button on supported sites
 - Persona and project management (add, remove, switch)
+- Optional Ollama summarization (local only)
+- Fallback mode when conversation extraction fails
 
-### Fixed
-- Extension context invalidated errors
-- Storage access when context invalid
+### Privacy & security
+- Data stays on device (chrome.storage.local)
+- Ollama URL restricted to localhost only
