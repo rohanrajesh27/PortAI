@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Port AI",
+  "version": "0.2.0",
+  "description": "Continue work on another AI in one click. Preserves decisions, compresses context. ChatGPT, Claude, Grok.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
+      "js": ["storage.js", "injector.js", "compressor.js", "platforms.js", "inline.js", "content/chatgpt.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["storage.js", "injector.js", "compressor.js", "platforms.js", "inline.js", "content/claude.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://grok.com/*", "https://www.grok.com/*", "https://x.ai/*"],
+      "js": ["storage.js", "injector.js", "compressor.js", "platforms.js", "inline.js", "content/universal.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

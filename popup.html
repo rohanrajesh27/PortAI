@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=340">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <section class="personas">
+      <h2>Persona <span class="muted">(pretext for all)</span></h2>
+      <div id="persona-list" class="item-list"></div>
+      <div id="persona-form" class="form" style="display:none;">
+        <input type="text" id="persona-name" placeholder="Name: e.g. MBA student at WashU">
+        <input type="text" id="persona-role" placeholder="Role: e.g. building side projects; VC/startup focus">
+        <input type="text" id="persona-domains" placeholder="Domains (comma): e.g. VC, AI, product strategy">
+        <input type="text" id="persona-prefs" placeholder="Preferences (comma): e.g. concise, structured, bullets when helpful">
+        <button id="persona-save">Save</button>
+        <button id="persona-cancel" class="secondary">Cancel</button>
+      </div>
+      <button id="persona-add" class="btn-add">+ Add persona</button>
+    </section>
+
+    <section class="projects">
+      <h2>Project</h2>
+      <div id="project-list" class="item-list"></div>
+      <div id="project-form" class="form" style="display:none;">
+        <input type="text" id="project-name" placeholder="Name: e.g. Chrome extension MVP">
+        <input type="text" id="project-objective" placeholder="Objective: e.g. inject persona + project context into AI chats">
+        <input type="text" id="project-status" placeholder="Status: e.g. Testing injection">
+        <input type="text" id="project-constraints" placeholder="Constraints (comma): e.g. no backend, local storage only">
+        <button id="project-save">Save</button>
+        <button id="project-cancel" class="secondary">Cancel</button>
+      </div>
+      <button id="project-add" class="btn-add">+ Add project</button>
+    </section>
+
+    <section class="api" id="api-section">
+      <h2><span id="api-toggle">▼</span> Optional: Ollama</h2>
+      <p class="api-note">Full summaries via local Ollama. <a href="https://ollama.com" target="_blank" rel="noopener">Get Ollama →</a></p>
+      <div id="api-fields">
+        <label>Ollama API URL <input type="text" id="api-ollama-url" placeholder="http://localhost:11434" autocomplete="url"></label>
+      </div>
+    </section>
+
+    <section class="port">
+      <p id="status" class="status">—</p>
+      <div id="port-buttons" class="port-buttons"></div>
+    </section>
+
+    <section class="footer">
+      <p class="feedback-q">Is Port AI useful?</p>
+      <div class="feedback-btns">
+        <a href="https://github.com/rohanrajesh27/PortAI/discussions/new?category=ideas" target="_blank" rel="noopener noreferrer" class="feedback-link">Yes</a>
+        <span class="sep">·</span>
+        <a href="https://github.com/rohanrajesh27/PortAI/issues/new?title=Feedback%3A+Not+yet+useful&body=What+would+make+Port+AI+more+useful+for+you%3F" target="_blank" rel="noopener noreferrer" class="feedback-link">Not yet</a>
+      </div>
+      <a href="https://github.com/rohanrajesh27/PortAI/issues/new" target="_blank" rel="noopener noreferrer" class="footer-link">Report issue</a>
+    </section>
+  </div>
+  <script src="storage.js"></script>
+  <script src="utils.js"></script>
+  <script src="platforms.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
